@@ -1,0 +1,151 @@
+body {
+    background-image: url(../images/home_page_background_cropped.jpg);
+    background-size: cover;                      
+    background-repeat: no-repeat;
+    background-position: top center;
+    text-align: center;
+    font-family: 'Antic Didone', sans-serif;
+}
+
+#wrapper {
+    max-width: 1920px;
+    margin: auto;
+    padding: 25px 75px;
+}
+
+ul {
+    display: flow-root;
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+#navbar a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.8s ease-in-out 0s;
+    transition: all 0.8s ease-in-out 0s;
+}
+
+#navbar a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+#navbar {
+    width: 100%;
+    padding: 0% 0% 0% 0%;
+    text-align: center;
+}
+
+#navbar ul li {
+    display: block;
+    font-size: 30px;
+}
+
+.left-nav {
+    float: left;
+    margin: 30px 100px 30px 0px;
+}
+
+.right-nav {
+    float: right;
+    margin: 30px 0px 30px 100px;
+}
+
+#info {
+    display: block;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    min-height: calc(100vh - 210px);
+}
+
+.info-text {
+    font-size: 20px;
+    width: 350px;
+    margin: auto;
+    display: flow-root;
+    position: absolute;
+    bottom: 0;
+}
+
+.left-text {
+    text-align: left;
+    float: left;
+    left: 0;
+}
+
+.right-text {
+    text-align: right;
+    float: right;
+    right: 0;
+}
+
+#about-name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#about-name p {
+    margin: 5px;
+}
+
+#vietnamese-subname {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.project-link {
+    margin: 20px 0px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.underline {
+    /* I don't know why this is needed, I just added it and it worked in IE Edge. If we remove this width, the gradient breaks in IE Edge */
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 1px), black 10px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 2s;
+  }
+
+.project-link:hover .underline {
+    background-size: 100% 100%;
+}
+
+.current-page {
+    /* font-weight: bold; */
+    border-bottom: 0.5px solid;
+}
+
+#navbar .current-page a:hover:before  {
+    display: none;
+}
